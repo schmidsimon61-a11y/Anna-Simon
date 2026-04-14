@@ -1,0 +1,42 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap');
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Playfair Display", serif;
+
+  --color-wedding-off-white: #f8f5f2;
+  --color-wedding-beige: #e8ded2;
+  --color-wedding-brown: #c7b7a3;
+  --color-wedding-dark-green: #2f4f3f;
+  --color-wedding-dark: #3e342b;
+}
+
+@layer base {
+  body {
+    @apply bg-wedding-off-white text-wedding-dark font-sans antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif text-wedding-dark-green;
+  }
+}
+
+.bg-alpine-gradient {
+  background: linear-gradient(135deg, #f8f5f2 0%, #e8ded2 100%);
+}
+
+.card-hover {
+  @apply transition-all duration-300 hover:shadow-xl hover:-translate-y-1;
+}
+
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.8s ease-out;
+}
+
+.scroll-reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
